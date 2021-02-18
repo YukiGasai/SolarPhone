@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <title>Solar Phone</title>
+</head>
+
+<body>
+    <script src="assets/js/SolarPanelRender.js"></script>
+    <div class="topPortion">
+        <div class="topPortionWrapper">
+            <h1 class="topPortionHeader1">SOLAR PHONE</h1>
+            <a class="topPortionMore" href="#content">LEARN MORE</a>
+        </div>
+    </div>
+    <script>
+        $(window).scroll(function() {
+            var threshold = 1000;
+            var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
+            $("canvas").css("opacity", op);
+        });
+    </script>
+
+    <div id="content" class="bottomPortion">
+        <div class="top">
+            <div class="PicturePreview">
+                <img class="bottomPortionImg" src="" alt="">
+                <img class="bottomPortionImg" src="" alt="">
+            </div>
+            <div class="HeaderText">
+                <!-- <h1 class="bottomPortionHeader1">Solar Phone</h1> -->
+                <img class="bottomPortionHeader1" src="assets/icons/SolarPhonePath.svg" alt="">
+                <h2 class="bottomPortionHeader2">Use the sun as it's supposed to.</h2>
+                <p class="bottomPortionParagraph">
+                    We strive for a C02 free Mobile phone industry this is our step into the right direction. The solar Phone Sticker allows you to power you phone by the sun's energy. Despite hard weather conditions your phone will load over the day.
+                </p>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="QuickInfoWrapper">
+                <img class="QuickInfoIco" src="assets/icons/CargePoly.svg" alt="ChargerIcon">
+                <div class="QuickInfoTextWrapper">
+                    <h3 class="QuickInfoHeader">Fast Charge</h3>
+                    <p class="QuickInfoText">
+                        Loads a phone in under 3 hours. Battery friendly loading.
+                    </p>
+                </div>
+            </div>
+
+            <div class="QuickInfoWrapper">
+                <img class="QuickInfoIco" src="assets/icons/EnvPoly.svg" alt="ChargerIcon">
+                <div class="QuickInfoTextWrapper">
+                    <h3 class="QuickInfoHeader">Eco friendly</h3>
+                    <p class="QuickInfoText">
+                        No C02 Emission during production and over full lifespan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="QuickInfoWrapper">
+                <img class="QuickInfoIco" src="assets/icons/CompaPoly.svg" alt="ChargerIcon">
+                <div class="QuickInfoTextWrapper">
+                    <h3 class="QuickInfoHeader">Compatible</h3>
+                    <p class="QuickInfoText">
+                        Works for all inductive loaded phones. Easy installation.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <a class="bottomLink" href="#">DETAILS</a>
+            <a class="bottomLink" href="#">SHOP NOW</a>
+            <a class="bottomLink" href="#">CONTACT</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

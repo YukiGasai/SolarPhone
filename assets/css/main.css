@@ -1,0 +1,268 @@
+:root {
+    --greenPrime: #319177;
+    --bluePrime: #0A7E8C;
+    --blackPrime: #323334;
+    --whitePrime: #ffffff;
+}
+
+@font-face {
+    font-family: Accuratist;
+    src: url(Accuratist.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--blackPrime);
+    font-family: 'Accuratist';
+}
+
+
+/* Hide scrollbar */
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Good browser */
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+canvas {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+}
+
+.topPortion {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.topPortionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    padding: 30px;
+    height: min-content;
+}
+
+.topPortionHeader1 {
+    color: var(--whitePrime);
+    font-size: 60px;
+    text-transform: uppercase;
+    width: auto;
+    border: 5px solid var(--whitePrime);
+    padding: 0.2em;
+}
+
+@media(max-width: 1400px) {
+    .topPortionWrapper {
+        margin: 0 auto;
+    }
+    .topPortionHeader1 {
+        text-align: center;
+    }
+    .topPortionMore {
+        border: 5px solid var(--whitePrime);
+        padding: 0.2em;
+    }
+}
+
+h2 {
+    color: var(--whitePrime);
+}
+
+.topPortionMore {
+    text-decoration: none;
+    text-align: right;
+    color: var(--whitePrime);
+    font-size: 1.8em;
+}
+
+.bottomPortion {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bluePrime);
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    background: var(--blackPrime);
+    background: linear-gradient(220deg, var(--blackPrime) 55%, var(--bluePrime) 55%);
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    min-height: 42 0px;
+}
+
+.PicturePreview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.19);
+    padding: 20px;
+    height: min-content;
+    margin: 10px;
+}
+
+.bottomPortionImg {
+    width: 300px;
+    height: 300px;
+}
+
+.HeaderText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+}
+
+@media(max-width: 1350px) {
+    .HeaderText {
+        width: 100%;
+    }
+    .PicturePreview {
+        width: 80%;
+    }
+    .bottomPortionImg {
+        width: 100%;
+    }
+}
+
+
+/*
+.bottomPortionHeader1 {
+    font-family: Accuratist;
+    font-size: 65px;
+    text-align: right;
+    white-space: nowrap;
+    color: var(--greenPrime);
+    margin: 10px 10px 0px 0px;
+    width: min-content;
+}
+*/
+
+.bottomPortionHeader1 {
+    padding: 10px 10px 0px 0px;
+}
+
+.bottomPortionHeader2 {
+    font-family: Accuratist;
+    font-size: 45px;
+    text-align: right;
+    white-space: pre-wrap;
+    color: var(--whitePrime);
+    margin: 0px 10px 0px 0px;
+}
+
+.bottomPortionParagraph {
+    font-family: Segoe UI;
+    font-size: 25px;
+    word-wrap: normal;
+    color: var(--whitePrime);
+    text-shadow: 0px 3px 6px var(--greenPrime);
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    background: var(--greenPrime);
+    padding: 30px 0px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.QuickInfoWrapper {
+    display: flex;
+    flex-direction: row;
+    background: rgba(255, 255, 255, 0.19);
+    height: min-content;
+    flex: 1;
+    max-width: 100vw;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.QuickInfoWrapper:focus,
+.QuickInfoWrapper:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.19);
+}
+
+.QuickInfoIco {
+    width: 35%;
+}
+
+.QuickInfoTextWrapper {
+    width: 65%;
+}
+
+.QuickInfoHeader {
+    font-family: Segoe UI;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--whitePrime);
+    margin: 5px 0px;
+}
+
+.QuickInfoText {
+    font-family: Segoe UI;
+    font-size: 1.5em;
+    font-style: italic;
+    color: var(--whitePrime);
+    margin: 5px 0px;
+}
+
+@media(max-width: 950px) {
+    .middle {
+        flex-direction: column;
+    }
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    background: var(--blackPrime);
+    height: 20%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bottomLink {
+    font-family: Segoe UI;
+    font-size: 45px;
+    font-weight: bold;
+    text-decoration: 0;
+    text-align: center;
+    color: black;
+    white-space: nowrap;
+    background: var(--whitePrime);
+    width: 250px;
+    padding: 10px 20px;
+    margin: 30px 10px;
+    border-radius: 20px;
+}
