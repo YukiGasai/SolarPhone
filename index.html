@@ -8,38 +8,52 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <title>Solar Phone</title>
 </head>
 
 <body>
     <script src="assets/js/SolarPanelRender.js"></script>
+    <script src="assets/js/changePanels.js"></script>
     <div class="topPortion">
         <div class="topPortionWrapper">
-            <h1 class="topPortionHeader1">SOLAR PHONE</h1>
+
+            <img class="topPortionHeader" src="assets/icons/SolarPhonePath.svg" alt="">
             <a class="topPortionMore" href="#content">LEARN MORE</a>
         </div>
     </div>
-    <script>
-        $(window).scroll(function() {
-            var threshold = 1000;
-            var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
-            $("canvas").css("opacity", op);
-        });
-    </script>
 
     <div id="content" class="bottomPortion">
         <div class="top">
             <div class="PicturePreview">
-                <img class="bottomPortionImg" src="" alt="">
-                <img class="bottomPortionImg" src="" alt="">
+                <div>
+                    <h3 class="bottomImageHeader">10 Nano Stickers</h3>
+                    <hr id="horizontal">
+                    <div class="bottomImageWrapper">
+                        <img class="bottomPortionImg" id="SmallPanelPhone" src="assets/icons/ExamplePhones/1.svg" alt="">
+
+                    </div>
+                </div>
+                <div>
+                    <h3 class="bottomImageHeader">1 Giga Sticker</h3>
+                    <hr id="horizontal">
+                    <div class="bottomImageWrapper">
+                        <img class="bottomPortionImg" src="assets/icons/HandyPiktogramm.svg" alt="">
+
+
+                    </div>
+
+                </div>
+
+                <p class="bottomImageText">
+                    <span class="priceTag">69,99€</span> <br> <br> <br> Small surface for fully customisable designs <br> or an easy to apply one sticker solution.
+                </p>
             </div>
             <div class="HeaderText">
                 <!-- <h1 class="bottomPortionHeader1">Solar Phone</h1> -->
-                <img class="bottomPortionHeader1" src="assets/icons/SolarPhonePath.svg" alt="">
+
                 <h2 class="bottomPortionHeader2">Use the sun as it's supposed to.</h2>
                 <p class="bottomPortionParagraph">
-                    We strive for a C02 free Mobile phone industry this is our step into the right direction. The solar Phone Sticker allows you to power you phone by the sun's energy. Despite hard weather conditions your phone will load over the day.
+                    <span class="highlight">The climate</span> is changing and so is our technology. We strive for a CO<code>2</code> free mobile phone industry. This is our step into the right direction.<br><br> <span class="highlight">Create your own Solarphone</span>                    by equipping your device with our stickers. Even rainy days won't affect the efficiency of our product. To protect you and your device we only work with the most secure technology as well as the most reliable material.
                 </p>
             </div>
         </div>
@@ -47,9 +61,9 @@
             <div class="QuickInfoWrapper">
                 <img class="QuickInfoIco" src="assets/icons/CargePoly.svg" alt="ChargerIcon">
                 <div class="QuickInfoTextWrapper">
-                    <h3 class="QuickInfoHeader">Fast Charge</h3>
+                    <h3 class="QuickInfoHeader">Reliability</h3>
                     <p class="QuickInfoText">
-                        Loads a phone in under 3 hours. Battery friendly loading.
+                        Battery friendly loading guarantees the longevity of both phone and stickers.
                     </p>
                 </div>
             </div>
@@ -59,7 +73,7 @@
                 <div class="QuickInfoTextWrapper">
                     <h3 class="QuickInfoHeader">Eco friendly</h3>
                     <p class="QuickInfoText">
-                        No C02 Emission during production and over full lifespan.
+                        No CO<code>2</code> Emission is emitted either during production nor over full lifespan.
                     </p>
                 </div>
             </div>
@@ -67,9 +81,9 @@
             <div class="QuickInfoWrapper">
                 <img class="QuickInfoIco" src="assets/icons/CompaPoly.svg" alt="ChargerIcon">
                 <div class="QuickInfoTextWrapper">
-                    <h3 class="QuickInfoHeader">Compatible</h3>
+                    <h3 class="QuickInfoHeader">Compatibility</h3>
                     <p class="QuickInfoText">
-                        Works for all inductive loaded phones. Easy installation.
+                        Works for all inductive loadable phones. Easy installation.
                     </p>
                 </div>
             </div>

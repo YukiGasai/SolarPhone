@@ -47,6 +47,7 @@ var material = new THREE.MeshStandardMaterial({
 });
 var mesh = new THREE.Mesh(geometry, material);
 
+
 var offset = 0;
 for (var y = -70; y < 200; y += 12) {
 
@@ -66,7 +67,7 @@ for (var y = -70; y < 200; y += 12) {
 
 
         var tl = new TimelineMax({
-            delay: getRndInteger(4, 10),
+            delay: 0.1,
             onComplete: function() {
                 this.restart()
             }
@@ -79,8 +80,8 @@ for (var y = -70; y < 200; y += 12) {
 
 }
 
-const dirLight2 = new THREE.DirectionalLight(0x319177, 1, 2000);
-dirLight2.position.set(10, 10, 10);
+const dirLight2 = new THREE.DirectionalLight(0x2794d4, 1, 1000);
+dirLight2.position.set(10, 10, 15);
 dirLight2.rotation.set(1.0542109430544344, -0.29677192660355917, 0.4754306248087563);
 scene.add(dirLight2);
 

@@ -1,6 +1,6 @@
 :root {
     --greenPrime: #319177;
-    --bluePrime: #0A7E8C;
+    --bluePrime: #2794d4;
     --blackPrime: #323334;
     --whitePrime: #ffffff;
 }
@@ -54,31 +54,32 @@ canvas {
 .topPortionWrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-left: auto;
     padding: 30px;
     height: min-content;
 }
 
-.topPortionHeader1 {
-    color: var(--whitePrime);
-    font-size: 60px;
-    text-transform: uppercase;
+.topPortionHeader {
     width: auto;
-    border: 5px solid var(--whitePrime);
-    padding: 0.2em;
+    width: 300px;
 }
 
 @media(max-width: 1400px) {
     .topPortionWrapper {
         margin: 0 auto;
+        align-items: center;
     }
-    .topPortionHeader1 {
+    .topPortionHeader {
         text-align: center;
+        width: 80%;
     }
     .topPortionMore {
-        border: 5px solid var(--whitePrime);
+        border-top: 5px solid var(--whitePrime);
         padding: 0.2em;
+        margin: 5px;
+        width: 100%;
+        text-align: center !important;
     }
 }
 
@@ -88,7 +89,8 @@ h2 {
 
 .topPortionMore {
     text-decoration: none;
-    text-align: right;
+    padding-top: 10px;
+    text-align: left;
     color: var(--whitePrime);
     font-size: 1.8em;
 }
@@ -127,50 +129,66 @@ h2 {
     margin: 10px;
 }
 
+.bottomImageHeader {
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#bottomImageHeaderRight {
+    text-align: right;
+}
+
 .bottomPortionImg {
-    width: 300px;
-    height: 300px;
+    height: 400px;
+}
+
+.bottomImageWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#firstImage {
+    border-right: 5px solid black;
+    padding-right: 20px;
+}
+
+#horizontal {
+    border: 1px solid black;
+}
+
+.bottomImageText {
+    width: 240px;
+    height: min-content;
+    color: black;
+    font-size: 28px;
+    padding: 0px 10px;
+    align-self: flex-end;
 }
 
 .HeaderText {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 50%;
+    margin: 10px;
+    width: 40%;
 }
 
 @media(max-width: 1350px) {
     .HeaderText {
         width: 100%;
     }
-    .PicturePreview {
-        width: 80%;
-    }
     .bottomPortionImg {
         width: 100%;
     }
 }
 
-
-/*
-.bottomPortionHeader1 {
-    font-family: Accuratist;
-    font-size: 65px;
-    text-align: right;
-    white-space: nowrap;
-    color: var(--greenPrime);
-    margin: 10px 10px 0px 0px;
-    width: min-content;
-}
-*/
-
-.bottomPortionHeader1 {
-    padding: 10px 10px 0px 0px;
-}
-
 .bottomPortionHeader2 {
     font-family: Accuratist;
-    font-size: 45px;
+    padding: 10px 10px 0px 0px;
+    font-size: 50px;
     text-align: right;
     white-space: pre-wrap;
     color: var(--whitePrime);
@@ -182,13 +200,13 @@ h2 {
     font-size: 25px;
     word-wrap: normal;
     color: var(--whitePrime);
-    text-shadow: 0px 3px 6px var(--greenPrime);
+    text-shadow: 0px 3px 6px var(--bluePrime);
 }
 
 .middle {
     display: flex;
     flex-direction: row;
-    background: var(--greenPrime);
+    background: url('../icons/sky.jpg');
     padding: 30px 0px;
     align-items: center;
     justify-content: space-around;
@@ -213,6 +231,7 @@ h2 {
 
 .QuickInfoIco {
     width: 35%;
+    margin-right: 15px;
 }
 
 .QuickInfoTextWrapper {
@@ -253,16 +272,67 @@ h2 {
 }
 
 .bottomLink {
+    position: relative;
+    display: block;
     font-family: Segoe UI;
-    font-size: 45px;
+    font-size: 38px;
     font-weight: bold;
     text-decoration: 0;
     text-align: center;
     color: black;
     white-space: nowrap;
     background: var(--whitePrime);
-    width: 250px;
-    padding: 10px 20px;
-    margin: 30px 10px;
-    border-radius: 20px;
+    width: 230px;
+    padding: 10px 0;
+    margin: 30px 30px;
+    z-index: 888;
+}
+
+.bottomLink::before {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    background: transparent url('/assets/icons/triangle.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+}
+
+.bottomLink::after {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    background: transparent url('/assets/icons/triangle.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+    transform: rotate(180deg);
+}
+
+.bottomLink:hover {
+    filter: drop-shadow(5px 10px 4px black);
+    transform: scale(1.01);
+}
+
+.bottomLink:hover .bottomLink::after {
+    transform: rotate(40deg);
+}
+
+.highlight {
+    font-size: 35px;
+}
+
+#SmallPanelPhone {
+    opacity: 1;
+    transition: opacity 2.5s linear;
+}
+
+.priceTag {
+    font-size: 40px;
 }
