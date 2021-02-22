@@ -181,9 +181,6 @@ h2 {
     .HeaderText {
         width: 100%;
     }
-    .bottomPortionImg {
-        width: 100%;
-    }
 }
 
 .bottomPortionHeader2 {
@@ -342,5 +339,9 @@ h2 {
 }
 
 .priceTag {
+    text-align: center;
     font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    border: 3px solid black;
 }
