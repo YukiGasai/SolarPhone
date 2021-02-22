@@ -38,31 +38,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-
-
-    // window.addEventListener('resize', function(event) {
-
-    //     var infoContainer = document.getElementsByClassName('QuickInfoWrapper');
-
-    //     var maxWidth = 0;
-    //     var maxHeight = 0;
-    //     for (let index = 0; index < infoContainer.length; index++) {
-    //         const element = infoContainer[index];
-
-    //         if (element.clientWidth > maxWidth) maxWidth = element.clientWidth;
-    //         if (element.clientHeight > maxHeight) maxHeight = element.clientHeight;
-    //     }
-
-
-    //     for (let index = 0; index < infoContainer.length; index++) {
-    //         const element = infoContainer[index];
-
-    //         element.clientWidth = maxWidth;
-    //         element.clientHeight = maxHeight;
-    //     }
-
-
-    // })
-
-
 });
