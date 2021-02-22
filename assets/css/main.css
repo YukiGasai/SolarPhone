@@ -301,7 +301,7 @@ h2 {
     position: absolute;
     top: 0px;
     left: -30px;
-    background: transparent url('../icons/triangle.svg');
+    background: transparent url('../icons/A.svg');
     background-repeat: no-repeat;
     background-size: contain;
     width: 100px;
@@ -314,7 +314,7 @@ h2 {
     position: absolute;
     top: 0px;
     right: -30px;
-    background: transparent url('../icons/triangle.svg');
+    background: transparent url('../icons/A.svg');
     background-repeat: no-repeat;
     background-size: contain;
     width: 100px;
