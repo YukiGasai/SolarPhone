@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (imageNumber == undefined) {
                 randImg = Math.floor(Math.random() * 9) + 1
-                console.log(randImg);
             } else {
                 randImg = imageNumber;
             }
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(ChangeImg, 2500)
         }
 
-        var interval = setInterval(PhoneRotation, 7000);
+        var interval = setInterval(PhoneRotation, 10000);
 
 
         SmallPanel.addEventListener('click', function(event) {
@@ -38,5 +37,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     }
+
+
+
+    // window.addEventListener('resize', function(event) {
+
+    //     var infoContainer = document.getElementsByClassName('QuickInfoWrapper');
+
+    //     var maxWidth = 0;
+    //     var maxHeight = 0;
+    //     for (let index = 0; index < infoContainer.length; index++) {
+    //         const element = infoContainer[index];
+
+    //         if (element.clientWidth > maxWidth) maxWidth = element.clientWidth;
+    //         if (element.clientHeight > maxHeight) maxHeight = element.clientHeight;
+    //     }
+
+
+    //     for (let index = 0; index < infoContainer.length; index++) {
+    //         const element = infoContainer[index];
+
+    //         element.clientWidth = maxWidth;
+    //         element.clientHeight = maxHeight;
+    //     }
+
+
+    // })
+
 
 });
