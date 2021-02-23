@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var interval = setInterval(PhoneRotation, 10000);
 
 
-        SmallPanel.addEventListener('click', function(event) {
+        var changeImg = function(event) {
             event.preventDefault();
             event.stopPropagation();
 
@@ -34,6 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             ChangeImg();
+        }
+
+        SmallPanel.addEventListener('click', changeImg);
+
+        SmallPanel.addEventListener('keydown', (event) => {
+            if (event.key === "Enter")
+                changeImg(event)
         });
 
     }

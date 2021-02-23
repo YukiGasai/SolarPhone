@@ -1,9 +1,13 @@
 :root {
     --greenPrime: #319177;
-    --bluePrime: #2794d4;
+    --bluePrime: #2694d4;
     --blackPrime: #323334;
     --whitePrime: #ffffff;
     --yellowPrime: #f4d559;
+}
+
+* {
+    outline: none;
 }
 
 @font-face {
@@ -57,8 +61,8 @@ canvas {
     flex-direction: column;
     align-items: flex-start;
     margin-left: auto;
-    padding: 30px;
     height: min-content;
+    padding: 30px;
 }
 
 .topPortionHeader {
@@ -94,6 +98,12 @@ h2 {
     text-align: left;
     color: var(--whitePrime);
     font-size: 1.8em;
+    transition: color 300ms linear;
+}
+
+.topPortionMore:hover,
+.topPortionMore:focus {
+    color: var(--yellowPrime);
 }
 
 .bottomPortion {
@@ -161,6 +171,8 @@ h2 {
 }
 
 .bottomImageText {
+    font-family: 'Segoe UI';
+    font-weight: bold;
     width: 240px;
     height: min-content;
     color: black;
@@ -227,7 +239,7 @@ h2 {
 
 .QuickInfoWrapper:focus,
 .QuickInfoWrapper:hover {
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.19);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
 }
 
 .QuickInfoIco {
@@ -240,10 +252,10 @@ h2 {
 }
 
 .QuickInfoHeader {
-    font-family: Segoe UI;
     font-size: 2em;
     font-weight: bold;
     font-style: italic;
+    letter-spacing: 3px;
     text-shadow: 3px 3px var(--blackPrime);
     color: var(--yellowPrime);
     margin: 5px 0px;
@@ -320,12 +332,14 @@ h2 {
     transform: rotate(180deg);
 }
 
-.bottomLink:hover {
+.bottomLink:hover,
+.bottomLink:focus {
     filter: drop-shadow(5px 10px 4px black);
     transform: scale(1.01);
 }
 
-.bottomLink:hover .bottomLink::after {
+.bottomLink:hover .bottomLink::after,
+.bottomLink:focus .bottomLink::after {
     transform: rotate(40deg);
 }
 

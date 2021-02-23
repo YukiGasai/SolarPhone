@@ -80,7 +80,7 @@ for (var y = -70; y < 200; y += 12) {
 
 }
 
-const dirLight2 = new THREE.DirectionalLight(0x2794d4, 1, 1000);
+const dirLight2 = new THREE.DirectionalLight(0x2694d4, 1, 1000);
 dirLight2.position.set(10, 10, 15);
 dirLight2.rotation.set(1.0542109430544344, -0.29677192660355917, 0.4754306248087563);
 scene.add(dirLight2);
